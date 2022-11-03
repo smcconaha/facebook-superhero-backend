@@ -33,17 +33,24 @@ def select_all():
                 JOIN ability_types abtype ON
                 (abs.ability_type_id = abtype.id)
                 GROUP BY h.id
+                ORDER BY h.id
     """
     list_of_all = execute_query(query).fetchall()
     ppshasta(list_of_all)
-select_all()
+
+# select_all()
 
 # ***************SHOW ONE CHARACTERS**************
 def select_one():
     query = """
-        SELECT *
-        FROM heroes
-        WHERE id = %s
+        SELECT h.id, h.name, h.about_me, h.biography, STRING_AGG(abtype.name,',') as abilities
+            FROM heroes h
+            JOIN abilities abs
+            ON (h.id = abs.hero_id)
+            JOIN ability_types abtype ON
+            (abs.ability_type_id = abtype.id)
+            WHERE h.id = %s
+            GROUP BY h.id
     """
     id = input('What is the id?: ')
     list_of_heroes = execute_query(query, (id,)).fetchall()
@@ -51,3 +58,4 @@ def select_one():
     for record in list_of_heroes:
         print(record[1])
 
+select_one()
