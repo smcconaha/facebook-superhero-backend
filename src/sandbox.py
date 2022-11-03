@@ -1,6 +1,21 @@
 from database.connection import execute_query
 
+def create_new():
+    query = """
+        INSERT INTO heroes (name, about_me, biography)
+        VALUES (name_input, about_me_input, origin_input);
+        INSERT INTO ability_types(name)
+        VALUES (powers_input);
+    """
 
+    name_input = input('The league of Superheroes would like to welcome you as an entry level sidekick.  First, you will need to add a record for yourself, what is your name?: ')
+    about_me_input = input('Tell us about you: ')
+    origin_input = input('What is your origin story?: ')
+    powers_input = input('What are your superpowers?: ')
+
+    create_you = execute_query(query, (name_input, about_me_input, origin_input, powers_input)).commit()
+
+create_new()
 
 def select_all():
     query = """
@@ -15,7 +30,6 @@ def select_all():
     print(list_of_all)
     for record in list_of_all():
         print(record[1])
-select_all()
 
 def select_one():
     query = """
