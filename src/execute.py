@@ -36,7 +36,7 @@ def init():
         create_new_hero_ability_type()
         init()
     elif directory == '3':
-        update_type('----Update Actions----\n Enter the number of your selection \n(1) Update superhero name (2) Update superhero "about me" \n(3) Update superhero bio\nEnter Selection: ')
+        update_type = input('----Update Actions----\n Enter the number of your selection \n(1) Update superhero name \n(2) Update superhero "about me" \n(3) Update superhero bio\nEnter Selection: ')
         if update_type == '1':
             update_hero_name()
             init()        
@@ -44,7 +44,7 @@ def init():
             update_hero_about()
             init()
         elif update_type == '3':
-            update_hero_bio()()
+            update_hero_bio()
             init()
         else:
              print('Please make a valid selection: ')

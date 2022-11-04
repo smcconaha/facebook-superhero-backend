@@ -1,3 +1,5 @@
+from database.connection import execute_query
+
 # ***************SHOW ALL CHARACTERS**************
 def select_all():
     query = """

@@ -1,3 +1,5 @@
+from database.connection import execute_query
+
 def update_hero_name():
     hero_id = input("Enter the hero ID: ")
     hero_name = input("Enter the new hero name: ")

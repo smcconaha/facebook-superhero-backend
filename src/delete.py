@@ -1,3 +1,5 @@
+from database.connection import execute_query
+
 # ***************DELETE ONE CHARACTER**************
 def another_one_bites_the_dust():
     query = """

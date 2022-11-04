@@ -1,3 +1,5 @@
+from database.connection import execute_query
+
 # ***************CREATE A CHARACTER************
 def create_new_hero():
     query = """
