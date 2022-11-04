@@ -1,6 +1,3 @@
-from database.connection import execute_query
-from pprint import pprint as pp
-
 # ***************DELETE ONE CHARACTER**************
 def another_one_bites_the_dust():
     query = """

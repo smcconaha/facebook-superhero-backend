@@ -1,6 +1,3 @@
-from database.connection import execute_query
-from pprint import pprint as pp
-
 # ***************CREATE A CHARACTER************
 def create_new_hero():
     query = """
