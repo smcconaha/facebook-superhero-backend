@@ -1,11 +1,16 @@
-def add_ability_to_hero():
-    hero_name = input("What is the hero's name?: ")
-    #name_input
-    hero = execute_query("SELECT id FROM heroes where name = %s", (hero_name,)).fetchone()
-    print('HERO ID IS: ', hero[0])
+from database.connection import execute_query
+from pprint import pprint as pp
 
-    ability_name = input("What is the ability's name?: ")
-    ability = execute_query("SELECT id FROM ability_types where name = %s", (ability_name,)).fetchone()
-    print('ABILITY ID IS: ', ability[0])
+def update_hero_name():
+    hero_id = input("Enter the hero ID: ")
+    hero_name = input("Enter the new hero name: ")
+    query = """
+        UPDATE heroes h
+        SET name = hero_name
+        WHERE h.id = %s;
+    """    
 
-    execute_query("INSERT INTO abilities (hero_id, ability_type_id) VALUES (%s, %s)", (hero[0], ability[0]))
+    hero = execute_query("SELECT id FROM heroes where id = %s", (hero_id,)).fetchone()
+    pp(hero[0])
+
+update_hero_name()
