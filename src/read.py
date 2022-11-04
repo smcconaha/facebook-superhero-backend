@@ -1,4 +1,5 @@
 from database.connection import execute_query
+from pprint import pprint as pp
 
 # ***************SHOW ALL CHARACTERS**************
 def select_all():

@@ -1,4 +1,5 @@
 from database.connection import execute_query
+from pprint import pprint as pp
 
 def update_hero_name():
     hero_id = input("Enter the hero ID: ")
