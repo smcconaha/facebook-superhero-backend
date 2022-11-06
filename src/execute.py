@@ -5,19 +5,27 @@ from create import create_new_hero, create_new_hero_ability, create_new_hero_abi
 from read import select_all, select_one
 from update import update_hero_name, update_hero_about, update_hero_bio
 from delete import another_one_bites_the_dust
-
-print('\n The league of Superheroes would like to welcome you as an entry level sidekick.  First, you will need to add a record for yourself.\n  NOTICE: Responses are continuously monitored and subject to auditing')
+print('''
+______ ___  _____  ___________  _____  _____ _   __ _   _  ___________ _____ 
+|  ___/ _ \/  __ \|  ___| ___ \|  _  ||  _  | | / /| | | ||  ___| ___ \  _  |
+| |_ / /_\ \ /  \/| |__ | |_/ /| | | || | | | |/ / | |_| || |__ | |_/ / | | |
+|  _||  _  | |    |  __|| ___ \| | | || | | |    \ |  _  ||  __||    /| | | |
+| |  | | | | \__/\| |___| |_/ /\ \_/ /\ \_/ / |\  \| | | || |___| |\ \\  \_/ /
+\_|  \_| |_/\____/\____/\____/  \___/  \___/\_| \_/\_| |_/\____/\_| \_|\___/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+\nThe league of Superheroes would like to welcome you as an entry level sidekick.  First, you will need to add a record for yourself.\n  NOTICE: Responses are continuously monitored and subject to auditing')
+''')
 
 create_new_hero()
 create_new_hero_ability_type()
 
 # Directory Function
-print("Great job sidekick, keep up the good work and you may just become a real superhero!")
+
 
 def directory_mess():
     print('----Actions----\n Enter the number of your selection \n(1) View the superhero roster\n(2) Add a new superhero\n(3) Update superhero records\n(4) Delete a superhero')
 
 def init():
+    print("Great job sidekick, keep up the good work and you may just become a real superhero!")
     directory_mess()
     directory = input('Enter Number Selection From Directory: ')
     if directory == '1':
