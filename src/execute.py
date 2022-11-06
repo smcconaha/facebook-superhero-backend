@@ -12,7 +12,7 @@ ______ ___  _____  ___________  _____  _____ _   __ _   _  ___________ _____
 |  _||  _  | |    |  __|| ___ \| | | || | | |    \ |  _  ||  __||    /| | | |
 | |  | | | | \__/\| |___| |_/ /\ \_/ /\ \_/ / |\  \| | | || |___| |\ \\  \_/ /
 \_|  \_| |_/\____/\____/\____/  \___/  \___/\_| \_/\_| |_/\____/\_| \_|\___/                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
-\nThe league of Superheroes would like to welcome you as an entry level sidekick.  First, you will need to add a record for yourself.\n  NOTICE: Responses are continuously monitored and subject to auditing')
+\nThe league of Superheroes would like to welcome you as an entry level sidekick.\nFirst, you will need to add a record for yourself.\n*NOTICE*: Responses are continuously monitored and subject to auditing)
 ''')
 
 create_new_hero()
